@@ -1,0 +1,63 @@
+{
+  "name": "OpenDirector",
+  "productName": "OpenDirector",
+  "description": "Make better decisions with analysis on director impact, director / board remuneration and director shareholding / recent trades.",
+  "keywords": ["opendirector", "open remuneration", "director", "executive", "remuneration", "australia"],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "BigFuture",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "13.1.7",
+    "@electron-forge/cli": "^6.0.0-beta.59",
+    "@electron-forge/maker-deb": "^6.0.0-beta.59",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.59",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.59",
+    "@electron-forge/maker-zip": "^6.0.0-beta.59"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+		  "icon": "./assets/images/logo/icon"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel"
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+		{
+		  "name": "@electron-forge/maker-dmg",
+		  "config": {}
+		}
+      ],
+	  "publishers": [
+		  {
+		    "name": "@electron-forge/publisher-github",
+		    "config": {
+		      "repository": {
+		        "owner": "bigfuture",
+		        "name": "opendirector-desktop"
+		      },
+		      "prerelease": true
+		    }
+		  }
+	  ]
+    }
+  }
+}
