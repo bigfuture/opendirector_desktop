@@ -11,7 +11,7 @@
     "australia"
   ],
   "main": "./main.js",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "BigFuture",
   "scripts": {
     "start": "electron-forge start",
