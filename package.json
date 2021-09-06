@@ -58,7 +58,6 @@
         {
           "name": "@electron-forge/publisher-github",
           "config": {
-            "authToken": "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",
             "repository": {
               "owner": "bigfuture",
               "name": "opendirector_desktop"
