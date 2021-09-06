@@ -1,0 +1,23 @@
+repo:
+  - ./*
+
+assets:
+   - app/assets/*
+
+controllers:
+  - app/controllers/*
+
+jobs:
+  - app/jobs/*
+
+database:
+  - app/models/*
+
+library:
+  - app/lib/*
+
+frontend:
+  - app/javascript/*
+
+test:
+  - spec/*

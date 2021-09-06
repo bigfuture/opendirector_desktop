@@ -1,0 +1,38 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      timezone: "Australia/Sydney"
+    # Raise pull requests for version updates
+    # to pip against the `develop` branch
+    target-branch: "develop"
+    # Allow up to 5 open pull requests for pip dependencies
+    open-pull-requests-limit: 5
+    # Update the npm manifest file to relax
+    # the version requirements
+    versioning-strategy: increase-if-necessary
+    # Labels on pull requests for version updates only
+    labels:
+      - "bundler dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      timezone: "Australia/Sydney"
+    target-branch: "develop"
+    # Allow up to 5 open pull requests for pip dependencies
+    open-pull-requests-limit: 5
+    # Update the npm manifest file to relax
+    # the version requirements
+    versioning-strategy: increase-if-necessary
+    # Labels on pull requests for security and version updates
+    labels:
+      - "npm dependencies"
