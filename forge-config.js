@@ -1,5 +1,5 @@
 const path = require('path');
-const appPath = path.resolve(process.cwd(), `out/${productName}-darwin-x64/${productName}.app`);
+const appPath = path.resolve(process.cwd(), `out/OpenDirector-darwin-x64/OpenDirector.app`);
 
 module.exports = {
   "packagerConfig": {
