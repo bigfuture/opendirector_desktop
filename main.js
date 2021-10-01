@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
+const contextMenu = require('electron-context-menu')
 
 function createWindow () {
   // Create the browser window.
@@ -13,7 +14,8 @@ function createWindow () {
     backgroundColor: '#35d1be',
     center: true,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+	  spellcheck: true
     }
   })
 
@@ -23,6 +25,8 @@ function createWindow () {
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
+
+contextMenu()
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

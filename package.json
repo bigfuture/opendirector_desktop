@@ -11,7 +11,7 @@
     "australia"
   ],
   "main": "./main.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "BigFuture",
   "scripts": {
     "start": "electron-forge start",
@@ -27,17 +27,25 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.59",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.59",
     "@electron-forge/maker-zip": "^6.0.0-beta.59",
-	"@electron-forge/publisher-github": "^6.0.0-beta.60",
+    "@electron-forge/publisher-github": "^6.0.0-beta.60",
     "electron": "13.1.7"
   },
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "./assets/images/logo/icon"
+        "icon": "./assets/images/logo/icon",
+        "appCopyright": "Copyright © OpenDirector",
+        "appCategoryType": "public.app-category.finance",
+        "darwinDarkModeSupport": true
       },
       "makers": [
         {
-          "name": "@electron-forge/maker-squirrel"
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "iconUrl": "./assets/images/logo/icon.ico",
+            "setupIcon": "./assets/images/logo/icon.ico",
+            "setupExe": "OpenDirector-Setup"
+          }
         },
         {
           "name": "@electron-forge/maker-zip",
@@ -47,11 +55,30 @@
         },
         {
           "name": "@electron-forge/maker-deb",
-          "config": {}
+          "config": {
+            "options": {
+              "name": "open-director",
+              "genericName": "OpenDirector",
+              "productName": "OpenDirector",
+              "maintainer": "OpenDirector",
+              "homepage": "https://opendirector.com.au",
+              "icon": "./assets/images/logo/icon/icon.png"
+            }
+          }
         },
         {
           "name": "@electron-forge/maker-dmg",
-          "config": {}
+          "config": {
+            "name": "OpenDirector",
+            "format": "ULFO",
+            "overwrite": true,
+            "background": "./assets/images/background/background.png",
+            "icon": "./assets/images/logo/icon.icns",
+            "contents": [
+                { "x": 448, "y": 344, "type": "link", "path": "/Applications" },
+                { "x": 192, "y": 344, "type": "file", "path": "OpenDirector.app" }
+              ]
+          }
         }
       ],
       "publishers": [
@@ -66,5 +93,8 @@
         }
       ]
     }
+  },
+  "dependencies": {
+    "electron-context-menu": "^3.1.1"
   }
 }
