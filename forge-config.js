@@ -10,11 +10,7 @@ module.exports = {
   },
   "makers": [
     {
-      "name": "@electron-forge/maker-squirrel",
-      "config": {
-        "iconUrl": "./assets/images/logo/icon.ico",
-        "setupIcon": "./assets/images/logo/icon.ico"
-      }
+      "name": "@electron-forge/maker-squirrel"
     },
     {
       "name": "@electron-forge/maker-zip",
