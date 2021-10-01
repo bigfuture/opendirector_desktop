@@ -1,3 +1,4 @@
+const path = require('path');
 const appPath = path.resolve(process.cwd(), `out/${productName}-darwin-x64/${productName}.app`);
 
 module.exports = {
