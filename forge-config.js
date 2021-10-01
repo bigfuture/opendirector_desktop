@@ -13,8 +13,7 @@ module.exports = {
       "name": "@electron-forge/maker-squirrel",
       "config": {
         "iconUrl": "./assets/images/logo/icon.ico",
-        "setupIcon": "./assets/images/logo/icon.ico",
-        "setupExe": "OpenDirector"
+        "setupIcon": "./assets/images/logo/icon.ico"
       }
     },
     {
