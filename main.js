@@ -3,6 +3,11 @@ const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const contextMenu = require('electron-context-menu')
 
+require('update-electron-app')({
+  repo: 'bigfuture/opendirector_desktop',
+  updateInterval: '1 hour'
+})
+
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({

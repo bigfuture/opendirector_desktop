@@ -10,8 +10,12 @@
     "remuneration",
     "australia"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bigfuture/opendirector_desktop.git"
+  },
   "main": "./main.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "BigFuture",
   "scripts": {
     "start": "electron-forge start",
@@ -34,6 +38,7 @@
     "forge": "./forge-config.js"
   },
   "dependencies": {
-    "electron-context-menu": "^3.1.1"
+    "electron-context-menu": "^3.1.1",
+    "update-electron-app": "^2.0.1"
   }
 }
