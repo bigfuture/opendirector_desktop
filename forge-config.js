@@ -18,6 +18,7 @@ module.exports = {
     "osxNotarize": {
       "appleId": process.env['APPLE_ID'],
       "appleIdPassword": process.env['APPLE_ID_PASSWORD'],
+      "appBundleId": "com.bigfuture.opendirector"
     }
   },
   "makers": [
