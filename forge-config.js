@@ -1,4 +1,5 @@
 const path = require('path');
+const process = require('process');
 const appPath = path.resolve(process.cwd(), `out/OpenDirector-darwin-x64/OpenDirector.app`);
 
 module.exports = {
@@ -6,7 +7,18 @@ module.exports = {
     "icon": "./assets/images/logo/icon",
     "appCopyright": "Copyright © OpenDirector",
     "appCategoryType": "public.app-category.finance",
-    "darwinDarkModeSupport": true
+    "darwinDarkModeSupport": true,
+    "osxSign": {
+      "identity": "Developer ID Application: Sushil Dahal (Z4924KU438)",
+      "hardened-runtime": true,
+      "entitlements": "./assets/mac-build/entitlements.plist",
+      "entitlements-inherit": "./assets/mac-build/entitlements.plist",
+      "signature-flags": "library"
+    },
+    "osxNotarize": {
+      "appleId": process.env['APPLE_ID'],
+      "appleIdPassword": process.env['APPLE_ID_PASSWORD'],
+    }
   },
   "makers": [
     {
@@ -40,9 +52,9 @@ module.exports = {
         "background": "./assets/images/background/background.png",
         "icon": "./assets/images/logo/icon.icns",
         "contents": [
-            { "x": 448, "y": 344, "type": "link", "path": "/Applications" },
-            { "x": 192, "y": 344, "type": "file", "path": appPath }
-          ]
+          { "x": 448, "y": 344, "type": "link", "path": "/Applications" },
+          { "x": 192, "y": 344, "type": "file", "path": appPath }
+        ]
       }
     }
   ],
