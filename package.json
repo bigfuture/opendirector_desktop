@@ -11,7 +11,7 @@
     "australia"
   ],
   "main": "./main.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "BigFuture",
   "scripts": {
     "start": "electron-forge start",
@@ -21,14 +21,14 @@
     "lint": "echo \"No linting configured\""
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.59",
-    "@electron-forge/maker-deb": "^6.0.0-beta.59",
-    "@electron-forge/maker-dmg": "^6.0.0-beta.60",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.59",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.59",
-    "@electron-forge/maker-zip": "^6.0.0-beta.59",
-    "@electron-forge/publisher-github": "^6.0.0-beta.60",
-    "electron": "13.1.7"
+    "@electron-forge/cli": "latest",
+    "@electron-forge/maker-deb": "latest",
+    "@electron-forge/maker-dmg": "latest",
+    "@electron-forge/maker-rpm": "latest",
+    "@electron-forge/maker-squirrel": "latest",
+    "@electron-forge/maker-zip": "latest",
+    "@electron-forge/publisher-github": "latest",
+    "electron": "latest"
   },
   "config": {
     "forge": "./forge-config.js"
