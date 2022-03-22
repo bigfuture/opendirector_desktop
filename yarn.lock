@@ -1418,9 +1418,9 @@ electron-winstaller@^5.0.0:
     temp "^0.9.0"
 
 electron@latest:
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-15.1.0.tgz#a57f6978b5e8ef1918429b8c62f918868258f5a3"
-  integrity sha512-QZJKZdrOG2G9lyOrDpCHh+arMrj7ZVVBulrukhNXwCeCEHgNLTVULEQzMOB9AVXUbIs+FthcddlMgcgpaErohw==
+  version "17.1.2"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-17.1.2.tgz#b4e4a0df883d9a9854cf865efa2bb00b12d55b1d"
+  integrity sha512-hqKQaUIRWX5Y2eAD8FZINWD/e5TKdpkbBYbkcZmJS4Bd1PKQsaDVc9h5xoA8zZQkPymE9rss+swjRpAFurOPGQ==
   dependencies:
     "@electron/get" "^1.13.0"
     "@types/node" "^14.6.2"
